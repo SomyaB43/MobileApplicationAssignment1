@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4DAA2"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/PrincipalAmount"
+        android:layout_width="403dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="576dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="The Mortgage Principal Amount"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/InterestRate"
+        android:layout_height="60dp"
+        android:layout_marginBottom="408dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="The Interest Rate "
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="400dp"/>
+
+    <EditText
+        android:id="@+id/Tenure"
+        android:layout_width="404dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="240dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="The amount of years it will take to pay back the loan"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="168dp"
+        android:background="#DBCC9D"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="391dp"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:text="MY EMI CALCULATOR"
+        android:textColor="#873328"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="232dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#992626"
+        android:onClick="CalculateMonthlyPayment"
+        android:text="Calculate Monthly Payment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Mortgage"
+        android:layout_width="301dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="660dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Mortgage Principal Amount"
+        android:textColor="#902424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="468dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Interest Rate"
+        android:textColor="#982626"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="304dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Tenure"
+        android:textColor="#982626"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

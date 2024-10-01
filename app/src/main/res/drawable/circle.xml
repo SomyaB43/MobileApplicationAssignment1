@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This xml file is used to convert a rectangular text view shape to a circular text view shape. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="343dp"
+        android:height="343dp"/>
+    <solid android:color="#992626"/>
+</shape>
