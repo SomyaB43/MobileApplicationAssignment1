@@ -14,16 +14,16 @@ public class MonthlyPayment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monthly_payment);
 
-        // Retrieve the data from intent
+    // Retrieve the data from intent, set default values as 0, in case of empty values or lost data for principal, interest and tenure.
         Intent intent = getIntent();
         double principal = intent.getDoubleExtra("principal", 0);
         double interestRate = intent.getDoubleExtra("interestRate", 0);
         int tenure = intent.getIntExtra("tenure", 0);
 
-        // Calculate monthly payment with the values taken from getDouble and getIntExtra.
+    // Calculate monthly payment with the values taken from getDouble and getIntExtra.
         double monthlyPayment = calculateMonthlyPayment(principal, interestRate, tenure);
 
-// Display the monthly payment
+    // Display the monthly payment
         TextView paymentTextView = findViewById(R.id.paymentTextView);
         paymentTextView.setText(String.format("%.2f", monthlyPayment));
     }
@@ -34,7 +34,7 @@ public class MonthlyPayment extends AppCompatActivity {
         int Installments = tenure * 12;
 
        return (principal * monthlyRate * Math.pow(1 + monthlyRate, Installments)) /
-                (Math.pow(1 + monthlyRate, Installments) - 1);
+                (Math.pow(1 + monthlyRate, Installments) - 1);   //The EMI Calculation Formula
     }
 
     //This intent is used to start a new activity, in this case it would be to go back to the main activity.
