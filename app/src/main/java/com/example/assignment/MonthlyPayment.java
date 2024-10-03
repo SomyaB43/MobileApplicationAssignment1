@@ -21,7 +21,7 @@ public class MonthlyPayment extends AppCompatActivity {
         int tenure = intent.getIntExtra("tenure", 0);
 
     // Calculate monthly payment with the values taken from getDouble and getIntExtra.
-        double monthlyPayment = calculateMonthlyPayment(principal, interestRate, tenure);
+        double monthlyPayment = calculateEMI(principal, interestRate, tenure);
 
     // Display the monthly payment
         TextView paymentTextView = findViewById(R.id.paymentTextView);
@@ -29,7 +29,7 @@ public class MonthlyPayment extends AppCompatActivity {
     }
 
     //This is the method that will use the EMI calculation formula to calculate the monthly installments.
-    private double calculateMonthlyPayment(double principal, double interestRate, int tenure) {
+    private double calculateEMI(double principal, double interestRate, int tenure) {
         double monthlyRate = interestRate / 12 / 100;
         int Installments = tenure * 12;
 
